@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ynab-mcp-server",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": {"enabled": false},
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "18d244be56c74e3d977927c46552ff8e",
+      "remote": true
+    }
+  ],
+  "vars": {
+    "ALLOWED_GITHUB_LOGIN": "tonywaddle",
+    "YNAB_READ_ONLY": "true",
+    "AUTOBUDGET_MODE": "off",
+    "NAG_TIMEZONE": "Europe/London"
+  }
+}
